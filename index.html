@@ -10,16 +10,18 @@
   <script src="https://kit.fontawesome.com/bbd2f77825.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"> 
 </head>
 <body>
 <header>
   <section class="hero">
 
     <div class="nav-container">
+
       <div class="logo">
         <a href="#"><i class="fa-brands fa-pagelines"></i></a>
       </div>
+
       <nav class="nav-row">
         <ul>
           <li><a class="active" href="index.html">Home</a></li>
@@ -35,8 +37,58 @@
       <p class="hero-subtitle">Discover the beauty of mountains</p>
       <button class="hero-button" onclick="location.href='#'">Visit us!</button>
     </div>
+
   </section>
 </header>
+
+<main>
+  <div class="main-section">
+    <section class="what-to-see">
+      <h1>What to see</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias distinctio impedit explicabo ducimus, illum iste hic, atque odio numquam sequi, iusto illo sint asperiores facilis? Velit recusandae adipisci fuga rerum, accusantium cumque.</p>
+      <br>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis deserunt distinctio reiciendis consequuntur, nostrum aperiam. Ad, harum accusantium? Dolores accusamus enim et earum tempore vitae?</p>
+    </section>
+    <img src="/img/ibex.jpg" alt="an ibex with magnificent corns sitting on the rock in the mountains" class="ibex-img">
+    <section class="where-to-stay">
+      <h1>Where to stay</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptatibus quam libero est dolores, ipsam ex magni. Nobis, laudantium. Nulla earum odit culpa magni alias dolor vero, sequi totam, minima, perferendis dignissimos.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur rem eligendi magnam. Eos amet dignissimos corrupti provident atque quo reprehenderit, unde ad necessitatibus ipsum. Quia, tenetur sit. Commodi.</p>
+    </section>
+    <img src="/img/rifugio.jpg" alt="a mountain hut with tourists around enjoying a sunny day" class="rifugio-img">
+    <section class="about-us">
+      <h1>About us</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed exercitationem maxime, magnam dignissimos quisquam molestias cum? Animi nihil, mollitia fuga consectetur beatae numquam accusamus quam et quibusdam quaerat voluptate id ipsum officia?</p>
+      <br>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In esse nulla debitis magnam optio dolorum, voluptatibus cumque reiciendis cum neque reprehenderit temporibus voluptas, eaque rem molestiae.</p>
+    </section>
+    <img src="/img/photographer.jpg" alt="a photographer on the summit taking a photo of a mountain range" class="photographer-img">
+  </div>
+</main>
+
+<footer>
+  <div class="footer-section">
+    <section class="footer-email">
+      <form action="action-page.php">
+        <p>Get the latest news by signing up for our newsletter!</p><br>
+        <label for="email"></label>
+        <input type="text" id="email" name="email" placeholder="Enter your email address">
+        <input type="submit" value="Subscribe">
+      </form>
+
+    </section>
+    <section class="footer-social">Social</section>
+    <section class="footer-links">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="#">What to see</a></li>
+          <li><a href="#">Where to stay</a></li>
+          <li><a href="#">About us</a></li>
+        </ul>
+    </section>
+  </div>
+</footer>
 
 </body>
 </html>

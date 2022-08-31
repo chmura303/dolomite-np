@@ -23,9 +23,13 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
   text-decoration: none;
-  color: #000;
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
+	color: inherit;
+}
+
+.nav-container a {
+	color: #000;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -61,7 +65,7 @@ table {
 	height: 100vh;
 	display: grid;
 	grid-template-columns: repeat(16, 1fr);
-	grid-template-rows: 3em [menu-row] 10em [hero-content];
+	grid-template-rows: 3em [menu-row] 10em [empty] auto [hero-content];
 }
 
 .hero::before {
@@ -160,7 +164,7 @@ table {
 	letter-spacing: 0.1em;
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 1020px) {
 	.hero-title {
 		font-size: 3em;
 	}
@@ -170,11 +174,12 @@ table {
 	.hero-button {
 		font-size: 0.8em;
 	}
-	.nav-row li:nth-of-type(-n+4) {
-		display: none;
+	.nav-row li {
+		/* display: none; */
+		text-align: right;
 	}
 	.nav-container {
-		grid-column: 2 / 16;
+		grid-column: 2 / 16 ;
 	}
 	.hero-content {
 		grid-column: 2 / 11;
@@ -200,3 +205,121 @@ table {
 	color: #a7171a;
 	background-color: #fff;
 }
+
+/* MAIN */
+
+.main-section {
+	/* position: relative; */
+	width: 100%;
+	/* height: 100vh; */
+	display: grid;
+	grid-template-columns: repeat(16, 1fr);
+	grid-template-rows: 1fr [what-to-see] auto [for-ibex] 1fr [where-to-stay] auto [for-rifugio] 1fr [about-us] auto [for-photographer];
+}
+
+.what-to-see {
+	grid-column: 5 / 9;
+	grid-row: 1;
+}
+
+.ibex-img {
+	grid-column: 9 / 13;
+	grid-row: 1;
+}
+
+.where-to-stay {
+	grid-column: 9 / 13;
+	grid-row: 3;
+}
+
+.rifugio-img {
+	grid-column: 5 / 9;
+	grid-row: 3;
+}
+
+.about-us {
+	grid-column: 5 / 9;
+	grid-row: 5;
+}
+
+.photographer-img {
+	grid-column: 9 / 13;
+	grid-row: 5;
+}
+
+.ibex-img,
+.rifugio-img,
+.photographer-img {
+	width: 100%;
+	border-radius: 50%;
+	padding: 2em;
+}
+
+.main-section h1 {
+	font-size: 2.5em;
+	font-weight: 600;
+	font-family: 'Josefin Sans', sans-serif;
+	padding: 0.5em 0 0.5em 0;
+}
+
+@media (max-width: 1020px) {
+	.what-to-see,
+	.where-to-stay,
+	.about-us {
+		grid-column: 2 / 16;
+	}
+	.ibex-img {
+		grid-column: 2 / 16;
+		grid-row: 2;
+		padding: 0;
+	}
+	.rifugio-img {
+		grid-column: 2 / 16;
+		grid-row: 4;
+		padding: 0;
+	}
+	.photographer-img {
+		grid-column: 2 / 16;
+		grid-row: 6;
+		padding: 0;
+	}
+}
+
+/* FOOTER */
+
+.footer-section {
+	background: #323232;
+	color: #fff;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(16, 1fr);
+	grid-template-rows: 2em [empty] auto [footer-content-1] auto [footer-content-1] auto [footer-content-1] 10em [empty];
+}
+
+.footer-email {
+	grid-column: 5 / 8;
+	grid-row: 2;
+}
+.footer-social {
+	grid-column: 9 / 11;
+	grid-row: 2;
+}
+.footer-links {
+	grid-column: 11 / 13;
+	grid-row: 2;
+}
+
+@media (max-width: 1020px) {
+	.footer-email,
+	.footer-social,
+	.footer-links {
+		grid-column: 2 / 16;
+	}
+	.footer-social {
+		grid-row: 3;
+	}
+	.footer-links {
+		grid-row: 4;
+	}
+}
+
